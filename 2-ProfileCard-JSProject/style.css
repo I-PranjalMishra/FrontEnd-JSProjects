@@ -20,9 +20,20 @@
     width: 13em;
     height: 13em;
     border-radius: 50%;
-    box-shadow: 0 0 50px #d84869;
+    -webkit-box-shadow: 0 0 50px #d84869;
+            box-shadow: 0 0 50px #d84869;
+    background: -o-linear-gradient(115deg, #d84869, #f46641);
     background: linear-gradient(-25deg, #d84869, #f46641);
-    animation: circle1Animate 15s infinite;
+    -webkit-animation: circle1Animate 15s infinite;
+            animation: circle1Animate 15s infinite;
+  }
+  
+  @-webkit-keyframes circle1Animate {
+    50% {
+      left: 33%;
+      top: 4%;
+      scale: 1.11;
+    }
   }
   
   @keyframes circle1Animate {
@@ -40,9 +51,18 @@
     width: 16em;
     height: 16em;
     border-radius: 50%;
-    box-shadow: 0 0 50px #5648d8;
+    -webkit-box-shadow: 0 0 50px #5648d8;
+            box-shadow: 0 0 50px #5648d8;
+    background: -o-linear-gradient(115deg, #5648d8, #8641f4);
     background: linear-gradient(-25deg, #5648d8, #8641f4);
-    animation: circle2Animate 8s infinite;
+    -webkit-animation: circle2Animate 8s infinite;
+            animation: circle2Animate 8s infinite;
+  }
+  @-webkit-keyframes circle2Animate {
+    50% {
+      bottom: 6%;
+      right: 31%;
+    }
   }
   @keyframes circle2Animate {
     50% {
@@ -57,12 +77,22 @@
     translate: -50% -50%;
     height: 450px;
     border: 2px solid #ffffff30;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     background: #ffffff2e;
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
     border-radius: 15px;
     color: #ffffff;
     padding: 20px 50px;
@@ -82,14 +112,24 @@
     text-align: center;
   }
   .bottom-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 10px;
   }
   .btn-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 7px;
     padding: 9px 12px;
     background: #ffffff00;
@@ -108,6 +148,8 @@
     border-radius: 4px;
     color: #ffffffb9;
     cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
   }
   .btn-card:hover {
@@ -124,19 +166,31 @@
     width: 500px;
     scale: 0;
     background: #00000088;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     color: white;
     z-index: 1;
     padding: 20px 25px;
     border-radius: 20px;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
   .modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 25px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-bottom: 12px;
     border-bottom: 1px solid #ffffff88;
   }
@@ -148,10 +202,17 @@
   }
   .icon-container {
     margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .icon {
     border: 1px solid #ffffff88;
@@ -159,11 +220,19 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 10px 0px;
     gap: 10px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     margin-bottom: 25px;
     text-decoration: none;
@@ -229,6 +298,8 @@
     left: 0;
     right: 0;
     pointer-events: none;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
   .overlayactive {
@@ -241,7 +312,10 @@
       width: 300px;
     }
     .bottom-group {
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
     }
     .modal {
       width: 70vw;
@@ -250,9 +324,15 @@
   
   @media (max-width: 400px) {
     .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
     .card-wrapper {
       position: static;
